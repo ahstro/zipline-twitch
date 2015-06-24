@@ -1,0 +1,122 @@
+body {
+    background-color: #fdf5f5;
+    overflow: scroll;
+}
+
+ul {
+    padding: 0;
+}
+
+a>li {
+    display: inline;
+    text-align: center;
+    padding: 1em;
+    background-color: #fd9090;
+    border: 1px solid #fd9090;
+    color: #fff;
+}
+
+.content {
+    max-width: 24em;
+    min-width: 13.6em;
+    margin: .3em auto;
+    background-color: #fff;
+}
+
+/*
+ * TODO: Text decoration
+ */
+.streamerName {
+    padding: .25em .5em .25em .5em;
+}
+
+/* TODO: Remove small margins at top and bottom
+main:first-child {
+    //margin: 0;
+    border: 1em solid #fd9090;
+}
+
+main:last-child {
+    //margin: 0;
+    border: 1em solid #fd9090;
+*/
+
+/*
+ * TODO
+ */
+.streamer:hover {
+    background-color: #f8f8f8;
+    border-right: .5em solid #fd9090;
+}
+
+.streamerPicture {
+    border-radius: 20%;
+    padding: 0;
+    box-shadow: .2em .2em .1em #826464;
+    width: 4em;
+    margin: 0 1em 0 0;
+}
+
+.onlineColor {
+    color: #9090fd;
+}
+
+.info {
+    font-size: .7em;
+    position: absolute;
+    left: 8em;
+    bottom: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 24em;
+}
+
+.active {
+    font-weight: bold;
+}
+
+form {
+    border-right: .3em solid #fd9090;
+}
+
+form>div {
+    border: 1px solid #ddd;
+    border-radius: 1em;
+    margin: .5em;
+    padding: 0 .5em;
+}
+
+form>div>img {
+    width: 5%;
+    padding: 1px;
+}
+
+input[type="text"] {
+    width: 90%;
+    border: none;
+    margin: 0 .3em;
+    color: #bbb;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.streamer {
+    position: relative;
+    border-right: .3em solid #fd9090;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited {
+    color: #fd9090;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
