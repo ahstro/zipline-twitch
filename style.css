@@ -1,60 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 body {
     background-color: #fdf5f5;
-    overflow: scroll;
-    color: #fd9090;
-    font-size: 14px;
+         font-family: "Open Sans", Arial, sans-serif;
+           font-size: 14px;
+            overflow: scroll;
+               color: #fd9090;
 }
 
 ul {
     padding: 0;
-    margin: 0;
+     margin: 0;
 }
 
-a>li {
-    display: inline-block;
-    width: 33.3333333%;
-    text-align: center;
-    padding: 1em;
+li {
     background-color: #fd9090;
-    border: 1px solid #fd9090;
-    color: #fff;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+          box-sizing: border-box;
+          text-align: center;
+             display: inline-block;
+             padding: 1em;
+               width: 33.3333333%; /* Hackety hack */
+               color: #ffffff;
 }
 
 .content {
-    max-width: 24em;
-    min-width: 13.6em;
-    margin: .3em auto;
-    background-color: #fff;
+    background-color: #ffffff;
+           max-width: 24em;
+           min-width: 16em;
 }
 
 /*
- * TODO: Text decoration
+ * If content takes up full screen width, remove margins.
  */
-.streamerName {
-    padding: .25em .5em .25em .5em;
+@media (min-width: 21em) {
+    .content{
+        margin: .3em auto;
+    }
 }
 
-/*
- * TODO
- */
+.streamer {
+        position: relative;
+         padding: .25em 0;
+           color: #fd9090;
+}
+
 .streamer:hover {
     background-color: #f8f8f8;
-    border-right: .5em solid #fd9090;
-}
-
-img {
-    vertical-align: middle;
+        border-right: .2em solid #fd9090;
 }
 
 .streamerPicture {
     border-radius: 20%;
-    padding: 0;
-    box-shadow: .2em .2em .1em #826464;
-    width: 4em;
-    margin: 0 1em 0 0;
+       box-shadow: .2em .2em .1em #826464;
+           margin: 0 1em 0 0;
+            width: 4em;
+}
+
+/*
+ * TODO: Put this in .streamerPicture if replacing search icon with font-awesome or similar
+ */
+img {
+    vertical-align: middle;
 }
 
 .onlineColor {
@@ -62,50 +68,50 @@ img {
 }
 
 .info {
-    font-size: .7em;
-    position: absolute;
-    left: 8em;
-    bottom: 1em;
-    white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 24em;
+      white-space: nowrap;
+        font-size: .7em;
+         position: absolute;
+         overflow: hidden;
+           bottom: 1em;
+            width: 65%;
+             left: 8em;
 }
 
 .active {
     font-weight: bold;
 }
 
-form {
-    padding: .5em;
+form,
+main {
     border-right: .3em solid #fd9090;
+         padding: .5em 0 0 .5em;
+}
+
+form {
+    padding-right: .5em;
 }
 
 form>div {
-    border: 1px solid #ddd;
     border-radius: 1em;
-    padding: 0 .5em;
+          padding: 0 .5em;
+           border: 1px solid #ddd;
 }
 
-form>div>img {
-    width: 5%;
-    padding: 1px;
+form img {
+    width: 1em;
 }
 
 input[type="text"] {
-    width: 90%;
-    border: none;
-    margin: 0 .3em;
-    color: #bbb;
+    background-color: inherit;
+              margin: 0 .3em;
+              border: none;
+               color: #bbb;
+               width: 87%;
 }
 
 input[type="text"]:focus {
     outline: none;
-}
-
-.streamer {
-    position: relative;
-    border-right: .3em solid #fd9090;
 }
 
 a,
@@ -113,16 +119,10 @@ a:hover,
 a:focus,
 a:active,
 a:visited {
-    color: #fd9090;
     text-decoration: none;
+            outline: none;
 }
 
 .hidden {
     display: none;
-}
-
-.spinner {
-    text-align: center;
-    padding: 1em 0;
-    border-right: .3em solid #fd9090;
 }
