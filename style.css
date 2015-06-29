@@ -1,19 +1,26 @@
 body {
     background-color: #fdf5f5;
     overflow: scroll;
+    color: #fd9090;
+    font-size: 14px;
 }
 
 ul {
     padding: 0;
+    margin: 0;
 }
 
 a>li {
-    display: inline;
+    display: inline-block;
+    width: 33.3333333%;
     text-align: center;
     padding: 1em;
     background-color: #fd9090;
     border: 1px solid #fd9090;
     color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .content {
@@ -30,23 +37,16 @@ a>li {
     padding: .25em .5em .25em .5em;
 }
 
-/* TODO: Remove small margins at top and bottom
-main:first-child {
-    //margin: 0;
-    border: 1em solid #fd9090;
-}
-
-main:last-child {
-    //margin: 0;
-    border: 1em solid #fd9090;
-*/
-
 /*
  * TODO
  */
 .streamer:hover {
     background-color: #f8f8f8;
     border-right: .5em solid #fd9090;
+}
+
+img {
+    vertical-align: middle;
 }
 
 .streamerPicture {
@@ -77,13 +77,13 @@ main:last-child {
 }
 
 form {
+    padding: .5em;
     border-right: .3em solid #fd9090;
 }
 
 form>div {
     border: 1px solid #ddd;
     border-radius: 1em;
-    margin: .5em;
     padding: 0 .5em;
 }
 
@@ -119,4 +119,10 @@ a:visited {
 
 .hidden {
     display: none;
+}
+
+.spinner {
+    text-align: center;
+    padding: 1em 0;
+    border-right: .3em solid #fd9090;
 }
