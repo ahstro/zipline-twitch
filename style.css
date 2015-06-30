@@ -19,6 +19,7 @@ li {
           text-align: center;
              display: inline-block;
              padding: 1em;
+              cursor: pointer;
                width: 33.3333333%; /* Hackety hack */
                color: #ffffff;
 }
