@@ -1,19 +1,19 @@
 // Twitch url and streams to fetch data about
-var streams = ["freecodecamp", "storbeck", "terakilobyte", "habathcx","RobotCaleb","comster404","brunofin","thomasballinger","noobs2ninjas","beohoff","medrybw"],
-    twitch_url = "https://api.twitch.tv/kraken/";
+var streams = ["freecodecamp", "storbeck", "terakilobyte", "habathcx", "RobotCaleb", "comster404", "brunofin", "thomasballinger", "noobs2ninjas", "beohoff", "medrybw"],
+    twitchUrl = "https://api.twitch.tv/kraken/";
 
 // Creates an array with all future ajax calls
 var ajaxArr = streams.map(function(stream) {
     return $.ajax({
-        url: twitch_url + "channels/" + stream,
+        url: twitchUrl + "channels/" + stream,
         dataType: "jsonp",
         success: function() {
-            $('.loading').append(".");
+            $(".loading").append(".");
         }
     });
 }).concat(streams.map(function(stream) {
     return $.ajax({
-        url: twitch_url + "streams/" + stream,
+        url: twitchUrl + "streams/" + stream,
         dataType: "jsonp",
         success: function() {
             $('.loading').append(".");
