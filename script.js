@@ -53,7 +53,7 @@ $(document).ready(function() {
             // Loop through ajax responses...
             args.forEach(function(stream) {
                 // ...and find the one related to this stream
-                if(stream[1] === "success" && stream[0].display_name === undefined) {
+                if(stream[1] === "success" && stream[0].display_name === undefined && stream[0]._links !== undefined) {
                     var streamSplit = stream[0]._links.channel.split('/');
                     if(id === streamSplit[streamSplit.length - 1]) {
 
